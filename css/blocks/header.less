@@ -1,0 +1,175 @@
+// main: ../style.less
+.header {
+    width: 100%;
+    text-transform: uppercase;
+
+    &-overlay {
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1300px;
+        margin: 0 auto;
+
+        /*media*/
+        @media (max-width: 770px) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding: 1rem 1.5rem;
+        }
+    }
+
+    .no-scroll {
+        padding: 1.5rem 4rem;
+    }
+
+    .scroll {
+        padding: 0.5rem 4rem;
+    }
+
+    /*___Desktop navigation___*/
+    .nav {
+        display: flex;
+
+        &__item {
+            margin-right: 50px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+
+        &__link {
+            font-size: 22px;
+            font-weight: 400;
+            color: @primary;
+
+            &:hover {
+                color: @red;
+                transition: 0.2s linear;
+            }
+        }
+
+        /*media*/
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+
+
+    /*___Mobile navigation button___*/
+
+    .menu-icon {
+        z-index: 10;
+        position: relative;
+        display: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+        &-line {
+            position: relative;
+            width: 30px;
+            height: 5px;
+            background-color: @primary;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: -10px;
+                content: '';
+                width: 30px;
+                height: 5px;
+                background-color: @primary;
+                transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+            }
+
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 10px;
+                content: '';
+                width: 30px;
+                height: 5px;
+                background-color: @primary;
+                transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+            }
+        }
+
+        /*media*/
+        @media (max-width: 1200px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .menu-icon.menu-icon-active .menu-icon-line {
+        background-color: transparent;
+
+        &::before {
+            transform: rotate(45deg);
+            top: 0;
+            transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            top: 0;
+            transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+        }
+    }
+
+    /*___Mobile navigation___*/
+
+    .mobile-nav {
+        z-index: 5;
+        display: block;
+        position: absolute;
+        right: -15rem;
+        top: 0;
+        width: 15rem;
+        padding: 1.7rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: transform 0.4s ease-in;
+
+        &--active {
+            transform: translateX(-100%);
+        }
+
+        &__list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        &__item {
+            margin-bottom: 1.5rem;
+        }
+
+        &__link {
+            color: @primary;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 22px;
+
+            &:hover {
+                color: @red;
+                transition: 0.2s linear;
+            }
+        }
+
+        /*media*/
+        @media (max-width: 470px) {
+            width: 100%;
+            right: -100%;
+            padding-left: 40%;
+            padding-top: 5rem;
+        }
+    }
+}

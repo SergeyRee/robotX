@@ -1,0 +1,65 @@
+// main: ../style.less
+.prices {
+    .card {
+        margin-bottom: 1rem;
+        padding: 0;
+        
+        
+        &__header {
+            margin: -1px;
+            text-align: center;
+            transition: 0.17s linear;
+            background-color: @red;
+        }
+
+        &__title {
+            padding: 1rem 0 1.5rem;
+            font-size: 26px;
+        }
+
+        &__price {
+            margin-bottom: 2rem;
+            position: relative;
+            font-size: 40px;
+            font-weight: 600;
+
+            sup {
+                font-size: 20px;
+            }
+        }
+
+        &__features {
+            text-align: center;
+            padding: 2rem 0;
+
+            p {
+                color: @black;
+            }
+        }
+
+        img {
+            width: 4rem;
+        }
+
+        .btn-dark {
+            width: 65%;
+            margin-top: 1rem;
+            padding: 0.8rem;
+            text-transform: uppercase;
+            background-color: @black;
+            border-radius: 0;
+
+            &:hover {
+                background-color: rgb(128, 128, 128);
+                transition: 0.2s linear;
+            }
+        }
+
+        &:hover {
+            .card__header {
+                background-color: grey;
+                
+            }
+        }
+    }
+}

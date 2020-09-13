@@ -1,0 +1,119 @@
+// main: ../style.less
+
+.news {
+    background-color: grey;
+    background: url('../img/home-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding-bottom: 4rem;
+
+    .block-title {
+        padding-top: 3rem;
+    }
+
+    .block__left {
+        padding: 2rem 4rem;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        @media (max-width: 600px) {
+            padding: 0.5rem 1rem;
+        }
+
+        .news__item {
+            margin-bottom: 2rem;
+        }
+
+        .news__date {
+            min-width: 6rem;
+            min-height: 6rem;
+            padding-top: 6px;
+            font-size: 34px;
+            font-weight: 600;
+            background-color: @red;
+
+            @media (max-width: 600px) {
+                min-width: 5rem;
+                min-height: 5rem;
+            }
+        }
+
+        .news__card {
+
+            @media (max-width: 600px) {
+                font-size: 13px;
+            }
+        }
+
+        img {
+            padding: 0 4px;
+            width: 1.5rem;
+        }
+
+        .news__card__title {
+            font-weight: 700;
+            color: @primary;
+            transition: 0.2s linear;
+
+            &:hover {
+                color: @red;
+            }
+        }
+
+        img {
+            bottom: 0;
+            width: 1.5rem;
+        }
+    }
+
+    .block__right {
+        background-color: rgba(255, 0, 0, 0.6);
+
+        .news__item__right {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .news__date {
+            min-width: 5rem;
+            min-height: 5rem;
+            padding-top: 6px;
+            font-size: 24px;
+            font-weight: 600;
+            background-color: @black;
+        }
+
+        .news__card {
+
+            .news__card__title {
+                font-weight: 700;
+                color: @primary;
+                transition: 0.2s linear;
+
+                &:hover {
+                    color: @black;
+                }
+            }
+
+            .news__text {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            .news__card__ibdex {
+
+                img {
+                    padding: 0 4px;
+                    width: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .block__title {
+        margin-bottom: 2rem;
+        font-size: 26px;
+        font-weight: 600;
+    }
+}

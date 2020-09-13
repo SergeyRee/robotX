@@ -1,0 +1,40 @@
+// compress: true, sourceMap: true
+@import "vars";
+
+body {
+    background-color: @black;
+    height: 700vh;
+    color: @primary;
+}
+
+.block-title {
+    margin: 3rem;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+
+    span {
+        color: @red;
+    }
+
+}
+
+/*___Buttons__*/
+.btn-red {
+    background-color: @red;
+    color: @primary;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/*Blocks*/
+@import "blocks/header";
+@import "blocks/home";
+@import "blocks/service";
+@import "blocks/team";
+@import "blocks/gallery";
+@import "blocks/prices";
+@import "blocks/news";
+@import "blocks/contact";
+@import "blocks/footer";
